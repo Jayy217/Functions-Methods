@@ -8,118 +8,148 @@ namespace functions_Methods
         {
             string lineBreak = "==========================";
 
-            Task1();
+            //Task 1
+            WelcomeFriends();
             System.Console.WriteLine(lineBreak);
-            Task2();
-            System.Console.WriteLine(lineBreak);
-            Task3();
-            System.Console.WriteLine(lineBreak);
-            Task4();
-            System.Console.WriteLine(lineBreak);
-            Task5();
-            System.Console.WriteLine(lineBreak);
-            Task6();
-            System.Console.WriteLine(lineBreak);
-            Task7();
-            System.Console.WriteLine(lineBreak);
-            Task8();
-            System.Console.WriteLine(lineBreak);
-            Task9();
-            System.Console.WriteLine(lineBreak);
-            Task10();
-            System.Console.WriteLine(lineBreak);
-        }
-        static void Task1()
-        {
-            System.Console.WriteLine("Welcome friends!");
-            System.Console.WriteLine("Have a nice day!");
-        }
-        static void Task2()
-        {
+
+            //Task 2
             System.Console.Write("What's your name?: ");
             string name = Console.ReadLine();
-            System.Console.WriteLine("Welcome friend " + name);
-            System.Console.WriteLine("Have a nice day!");
-        }
-        static void Task3()
-        {
+            Welcome(name);
+            System.Console.WriteLine(lineBreak);
+
+            //Task 3
+            System.Console.WriteLine("Enter two numbers and I'll return their sum");
             System.Console.Write("Enter first number: ");
             int x = int.Parse(Console.ReadLine());
             System.Console.Write("Enter second number: ");
             int y = int.Parse(Console.ReadLine());
-            System.Console.WriteLine("The sum of these two numbers is: " + (y + x));
+            System.Console.WriteLine("The sum of these two numbers is: " + Sum(x, y));
+            System.Console.WriteLine(lineBreak);
+
+            //Task 4
+            System.Console.WriteLine("Type a sentence and I'll tell you how many spaces are in it.");
+            string sentence = Console.ReadLine();
+            System.Console.WriteLine("This sentence has " + SpaceCounter(sentence) + " spaces.");
+            System.Console.WriteLine(lineBreak);
+
+
+
+            //Task 5
+            int[] nums = new int[5];
+
+            System.Console.WriteLine("Enter 5 numbers and I'll return their sum:");
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                nums[i] = int.Parse(Console.ReadLine());
+            }
+
+            Sum5Nums(nums);
+
+            System.Console.WriteLine(lineBreak);
+
+            //Task 6
+            System.Console.WriteLine("Enter two numbers so I can swap their values");
+            System.Console.Write("x is equal to: ");
+            int num1 = int.Parse(Console.ReadLine());
+            System.Console.Write("y is equal to: ");
+            int num2 = int.Parse(Console.ReadLine());
+            System.Console.WriteLine("-----------------");
+
+            Swap(num1, num2);
+
+            System.Console.WriteLine(lineBreak);
+
+            //Task 7
+            System.Console.WriteLine("Enter two numbers, the first number will be calculated to the power of the second");
+
+            x = int.Parse(Console.ReadLine());
+            y = int.Parse(Console.ReadLine());
+
+            System.Console.WriteLine(x + "^" + y + " is equal to: " + PowerOf(x, y));
+            System.Console.WriteLine(lineBreak);
+
+            //Task 8
+            System.Console.WriteLine(lineBreak);
+
+            //Task 9
+            System.Console.Write("Enter a number and I'll tell you if it's a prime number or not: ");
+            x = int.Parse(Console.ReadLine());
+
+            Prime(x);
+
+            System.Console.WriteLine(lineBreak);
+
+            //Task 10
+            System.Console.WriteLine("Enter a multiple digit number and I'll give you the sum of the individual digits in that number. *sprinkles confusion dust*");
+
+            int bigNum = int.Parse(Console.ReadLine());
+
+            System.Console.WriteLine("The sum of all the digits in " + bigNum + " is equal to " + BigSum(bigNum));
+            System.Console.WriteLine(lineBreak);
         }
-        static void Task4()
+        static void WelcomeFriends()
         {
-            System.Console.Write("Input a string: ");
-            string str = Console.ReadLine();
+            System.Console.WriteLine("Welcome friends!");
+            System.Console.WriteLine("Have a nice day!");
+        }
+        static void Welcome(string name)
+        {
+            System.Console.WriteLine("Welcome friend " + name);
+            System.Console.WriteLine("Have a nice day!");
+        }
+        static int Sum(int x, int y)
+        {
+            int sum = x + y;
+            return sum;
+        }
+        static int SpaceCounter(string sentence)
+        {
             int counter = 0;
 
-            for (int i = 0; i < str.Length; i++)
+            for (int i = 0; i < sentence.Length; i++)
             {
                 // This got me for a little, why does this only work with single brackets not double? e.g. (str[i] == " ")
-                if (str[i] == ' ')
+                if (sentence[i] == ' ')
                 {
                     counter++;
                 }
             }
-            System.Console.WriteLine("This string has " + counter + " spaces");
+
+            return counter;
         }
-        static void Task5()
+        static void Sum5Nums(int[] nums)
         {
-            int[] numbers = new int[5];
             int sum = 0;
 
-            System.Console.Write("Enter 5 numbers and I'll return their sum:");
+            for (int i = 0; i < nums.Length; i++)
+            {
+                sum += nums[i];
+            }
 
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                numbers[i] = int.Parse(Console.ReadLine());
-            }
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                sum += numbers[i];
-            }
             System.Console.WriteLine("The sum of your numbers is " + sum);
         }
-        static void Task6()
+        static void Swap(int x, int y)
         {
-            int x, y, temp;
-
-            System.Console.WriteLine("Enter two numbers so I can swap their values");
-            System.Console.Write("x is equal to: ");
-            x = int.Parse(Console.ReadLine());
-            System.Console.Write("y is equal to: ");
-            y = int.Parse(Console.ReadLine());
-            System.Console.WriteLine("-----------------");
-
-            temp = x;
+            int temp = x;
             x = y;
             y = temp;
 
-            System.Console.WriteLine("x now equals: " + x);
-            System.Console.WriteLine("y now equals: " + y);
+            System.Console.WriteLine("x is now equal to " + x);
+            System.Console.WriteLine("y is now equal to " + y);
         }
-        static void Task7()
+        static double PowerOf(int x, int y)
         {
-            System.Console.WriteLine("Enter two numbers, the first number will be calculated to the power of the second");
-
-            int x = int.Parse(Console.ReadLine());
-            int y = int.Parse(Console.ReadLine());
-
             double ans = Math.Pow(x, y);
-
-            System.Console.WriteLine(x + "^" + y + " is equal to: " + ans);
+            return ans;
         }
         static void Task8()
         {
 
         }
-        static void Task9()
+        static void Prime(int x)
         {
-            System.Console.Write("Enter a number and I'll tell you if it's a prime number or not: ");
-            int x = int.Parse(Console.ReadLine());
-
             int prime = 1;
 
             for (int i = 2; i < x; i++)
@@ -139,23 +169,19 @@ namespace functions_Methods
                 System.Console.WriteLine(x + " is not a prime number.");
             }
         }
-        static void Task10()
+        static int BigSum(int num)
+        {
+            int sum = 0;
+            int input1 = num;
+
+            while (input1 != 0)
             {
-                System.Console.WriteLine("Enter a multiple digit number and I'll give you the sum of the individual digits in that number. *sprinkles confusion dust*");
-                int input = int.Parse(Console.ReadLine());
-
-                int sum = 0;
-                int input1 = input;
-
-                while (input1 != 0)
-                {
-                    int remainder = input1 % 10;
-                    sum += remainder;
-                    input1 = input1 / 10;
-                }
-
-                System.Console.WriteLine("The sum of all the digits in " + input + " is equal to " + sum);
+                int remainder = input1 % 10;
+                sum += remainder;
+                input1 = input1 / 10;
             }
+            return sum;
+        }
 
     }
 }

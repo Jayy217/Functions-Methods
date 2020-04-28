@@ -1,0 +1,11 @@
+C:\Users\iiflu\Desktop\Uni\Intro Programming\functions-methods\obj\Debug\netcoreapp3.1\functions-methods.csprojAssemblyReference.cache
+C:\Users\iiflu\Desktop\Uni\Intro Programming\functions-methods\obj\Debug\netcoreapp3.1\functions-methods.AssemblyInfoInputs.cache
+C:\Users\iiflu\Desktop\Uni\Intro Programming\functions-methods\obj\Debug\netcoreapp3.1\functions-methods.AssemblyInfo.cs
+C:\Users\iiflu\Desktop\Uni\Intro Programming\functions-methods\bin\Debug\netcoreapp3.1\functions-methods.exe
+C:\Users\iiflu\Desktop\Uni\Intro Programming\functions-methods\bin\Debug\netcoreapp3.1\functions-methods.deps.json
+C:\Users\iiflu\Desktop\Uni\Intro Programming\functions-methods\bin\Debug\netcoreapp3.1\functions-methods.runtimeconfig.json
+C:\Users\iiflu\Desktop\Uni\Intro Programming\functions-methods\bin\Debug\netcoreapp3.1\functions-methods.runtimeconfig.dev.json
+C:\Users\iiflu\Desktop\Uni\Intro Programming\functions-methods\bin\Debug\netcoreapp3.1\functions-methods.dll
+C:\Users\iiflu\Desktop\Uni\Intro Programming\functions-methods\bin\Debug\netcoreapp3.1\functions-methods.pdb
+C:\Users\iiflu\Desktop\Uni\Intro Programming\functions-methods\obj\Debug\netcoreapp3.1\functions-methods.dll
+C:\Users\iiflu\Desktop\Uni\Intro Programming\functions-methods\obj\Debug\netcoreapp3.1\functions-methods.pdb
