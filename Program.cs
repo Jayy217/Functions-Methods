@@ -149,7 +149,7 @@ namespace functions_Methods
             return ans;
         }
         static string Fibonacci(int num)
-        //Was is unorthodox to use a string here? I just found it made more sense to me, or was there another way you wanted me doing it?
+        //Was this unorthodox to use a string here? I just found it made more sense to me, or was there another way you wanted me doing it?
         {
             int temp;
             int num1 = 0;
