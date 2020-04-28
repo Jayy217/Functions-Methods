@@ -5,7 +5,7 @@ namespace functions_Methods
     class Program
     {
         static void Main(string[] args)
-        { 
+        {
             string lineBreak = "==========================";
 
             //Task 1
@@ -72,7 +72,7 @@ namespace functions_Methods
 
             //Task 8
             System.Console.Write("Input a number and I'll give you it's fibonacci sequence: ");
-            
+
             int fibo = int.Parse(Console.ReadLine());
             System.Console.WriteLine("The Fibonacci series of " + fibo + " is: " + Fibonacci(fibo));
             System.Console.WriteLine(lineBreak);
@@ -164,7 +164,7 @@ namespace functions_Methods
                 num2 += temp;
             }
             return str;
-        
+
         }
         static void Prime(int x)
         {
