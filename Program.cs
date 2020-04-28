@@ -5,7 +5,7 @@ namespace functions_Methods
     class Program
     {
         static void Main(string[] args)
-        {
+        { 
             string lineBreak = "==========================";
 
             //Task 1
@@ -71,6 +71,10 @@ namespace functions_Methods
             System.Console.WriteLine(lineBreak);
 
             //Task 8
+            System.Console.Write("Input a number and I'll give you it's fibonacci sequence: ");
+            
+            int fibo = int.Parse(Console.ReadLine());
+            System.Console.WriteLine("The Fibonacci series of " + fibo + " is: " + Fibonacci(fibo));
             System.Console.WriteLine(lineBreak);
 
             //Task 9
@@ -144,9 +148,23 @@ namespace functions_Methods
             double ans = Math.Pow(x, y);
             return ans;
         }
-        static void Task8()
+        static string Fibonacci(int num)
+        //Was is unorthodox to use a string here? I just found it made more sense to me, or was there another way you wanted me doing it?
         {
+            int temp;
+            int num1 = 0;
+            int num2 = 1;
+            string str = "";
 
+            for (int i = 0; i < num; i++)
+            {
+                str = str + num1 + " ";
+                temp = num1;
+                num1 = num2;
+                num2 += temp;
+            }
+            return str;
+        
         }
         static void Prime(int x)
         {
